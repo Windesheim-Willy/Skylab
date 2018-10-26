@@ -30,6 +30,7 @@ from email.MIMEText import MIMEText
 sender = 'willythegarbagedisposal@gmail.com'
 receivers = ['s1096820@windesheim.nl']
 
+print(sender)
 
 msg = MIMEMultipart()
 msg['From'] = 'willythegarbagedisposal@gmail.com'
