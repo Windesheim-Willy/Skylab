@@ -8,7 +8,7 @@ from email.mime.text import MIMEText
 from email.mime.base import MIMEBase
 from email import encoders
 
-# Ophalen emailaders en wachtwoord van account uit willy.ini
+# Ophalen emailaders en wachtwoord van account uit willy.ini uit dezelfde directory
 
 config = configparser.ConfigParser()
 config.read('willy.ini')
