@@ -1,12 +1,8 @@
+#start diverse modules
+from start_willy import *
+
 # Aanpassen in google account voor gmail => Config in gmail acoount Inloggen en beveiliging / Apps met toegang tot je account / Apps met lagere beveiliging toestaan: AAN
 
-import configparser
-import smtplib
-
-from email.mime.multipart import MIMEMultipart
-from email.mime.text import MIMEText
-from email.mime.base import MIMEBase
-from email import encoders
 
 # Ophalen emailaders en wachtwoord van account uit willy.ini uit dezelfde directory
 

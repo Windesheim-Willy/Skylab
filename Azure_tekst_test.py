@@ -1,6 +1,7 @@
-import urllib.request
-import json
-import configparser
+#start diverse modules
+from start_willy import *
+
+
 
 # Ophalen api access code uit willy.ini uit dezelfde directory, !code van Marc van Walt Meijer!
 
