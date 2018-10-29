@@ -13,8 +13,7 @@ sender = config['DEFAULT']['GMAIL'] # Willy Gmail account
 sender_ww = config['DEFAULT']['GMAIL-WW'] # Willy Gmail wachtwoord
 
 #Lijst met emailadressen waarnaartoe moet worden gestuurd
-#lijst = ['dylan.reimerink@windesheim.nl', 'fabian.vande.bor@windesheim.nl', 'george.wassink@windesheim.nl', 'johnny.borg@windesheim.nl', 'michel.stompe@windesheim.nl', 'sven.pook@windesheim.nl', 'jan-gerrit.elzinga@windesheim.nl', 'johan.int.hout@windesheim.nl', 'marc.van.walt-meijer@windesheim.nl', 'ruben.stuut@windesheim.nl']
-lijst = ['marc.van.walt-meijer@windesheim.nl']
+aantal_email 
 
 
 for i in range(len(lijst)):
