@@ -1,20 +1,26 @@
-#start diverse modules
+#start several modules
 from start_willy import *
 
-# Aanpassen in google account voor gmail => Config in gmail acoount Inloggen en beveiliging / Apps met toegang tot je account / Apps met lagere beveiliging toestaan: AAN
+# Modify in google account for gmail => Config in gmail acoount Inloggen en beveiliging / Apps met toegang tot je account / Apps met lagere beveiliging toestaan: AAN
 
 
-# Ophalen emailaders en wachtwoord van account uit willy.ini uit dezelfde directory
+# Retrieve emailaders and password of account from willy.ini from root dir of D:
 
 config = configparser.ConfigParser()
 config.read('willy.ini')
 
-sender = config['DEFAULT']['GMAIL'] # Willy Gmail account
-sender_ww = config['DEFAULT']['GMAIL-WW'] # Willy Gmail wachtwoord
+sender = config['GMAIL_INFO']['GMAIL'] # Willy Gmail account
+sender_ww = config['GMAIL_INFO']['GMAIL_WW'] # Willy Gmail password
 
-#Lijst met emailadressen waarnaartoe moet worden gestuurd
-aantal_email 
+lijst = []
 
+#List of emailadresses where email should be send to
+aantal_email = int(config['EMAIL_ADRESS']['NUMBER_OF_EMAIL'])
+
+for i in range(aantal_email):
+    lijst.append(config['EMAIL_ADRESS']['A0'+str(i)]);
+    print(i)
+    print("Updated List : ", lijst)
 
 for i in range(len(lijst)):
 
