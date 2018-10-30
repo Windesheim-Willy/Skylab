@@ -7,8 +7,8 @@ from start_willy import *
 config = configparser.ConfigParser()
 config.read('willy.ini')
 
-# Configure API access, !code van Marc van Walt Meijer!
-apiKey = config['DEFAULT']['AZURE'] # !code van Marc van Walt Meijer!
+
+apiKey = config['DEFAULT']['AZURE']
 
 sentimentUri = 'https://westeurope.api.cognitive.microsoft.com/text/analytics/v2.0/sentiment'
 keyPhrasesUri = 'https://westeurope.api.cognitive.microsoft.com/text/analytics/v2.0/keyPhrases'
