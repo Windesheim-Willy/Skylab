@@ -1,9 +1,8 @@
-#start diverse modules
+#start several modules
 from start_willy import *
 
 
-
-# Ophalen api access code uit willy.ini uit dezelfde directory, !code van Marc van Walt Meijer!
+# Retrieve api access code from willy.ini in same directory
 
 config = configparser.ConfigParser()
 config.read('willy.ini')

@@ -4,7 +4,7 @@ from start_willy import *
 # Modify in google account for gmail => Config in gmail acoount Inloggen en beveiliging / Apps met toegang tot je account / Apps met lagere beveiliging toestaan: AAN
 
 
-# Retrieve emailaders and password of account from willy.ini from root dir of D:
+# Retrieve emailaders and password of account from willy.ini in same directory
 
 config = configparser.ConfigParser()
 config.read('willy.ini')
