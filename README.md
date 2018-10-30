@@ -1,2 +1,2 @@
 # Skylab
-Code welke in Skylab gebruikt wordt
+Code which is used in SkyLab for Willy data processing
