@@ -3,6 +3,7 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 import json
 import ssl
 import time
+from time import sleep
 import datetime
 from datetime import datetime, date, time
 import rospy
@@ -56,8 +57,12 @@ def callback01(msg):     # To send data about status of Willy because AprilTag c
     print(r.read())
 
 def callback02(msg):     # To send data about status of Willy because activity changed
+    l_activity = c_activity
     c_activity = str(msg.data)
-
+    # wait 1 minute with status posting when Willy is available after driving to a user call
+    if l_activity == "4" and c_activity =="1":
+        sleep(60)
+        
     encoded_body = json.dumps({
         "Locatie": c_classroom,
         "Status": c_activity,
