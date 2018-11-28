@@ -31,7 +31,7 @@ translate_table  = pd.read_sql_query('select * from translate_table',con=conn)
 print(translate_table)
 
 # Usage: Post status from Willy activity topic to App website every 10 seconds
-willy_topic_name01 ='/navigation/current_apriltag'
+willy_topic_name01 ='openmv_apriltag'
 willy_topic_name02 ='/willy/activity'
 
 c_apriltag = ""
