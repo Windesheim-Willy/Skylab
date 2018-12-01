@@ -1,0 +1,49 @@
+/* Geldt voor gehele pagina */
+body
+{
+    font-family: Arial;
+    font-size: 16px;
+    background-color: #e5ecf2 ;
+    color: red;
+    link: black;
+}
+
+p.groot
+{
+    font-size: 30px;
+}
+
+
+p.klein
+{
+    font-size: 20px;
+
+}
+
+div
+{
+    background-color: brown ;
+}
+
+ul
+{
+    font-size: 20px;
+    color: black;
+}
+
+
+table
+{
+    border: 3px solid green;
+    background-color: #e5ecf2 ;
+}
+
+a
+{
+    color: black;
+}
+
+td
+{
+    border: 1px solid green;
+}
