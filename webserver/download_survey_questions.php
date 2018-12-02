@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <?php
+include("config.php");
+$host = SI_SURVEY_NODE_IP_ADDRESS;
 // make SSH connection
 print("Making SSH connection <br>");
 // use correct host when in production
-$connection = ssh2_connect('10.10.1.34',22);
+$connection = ssh2_connect($host,22);
 
 include("secret_info.php");
 $user = SSH_USERNAME;
