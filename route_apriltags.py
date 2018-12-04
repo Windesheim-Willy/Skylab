@@ -15,8 +15,10 @@ willy_route = pd.read_sql_query('Select * from navigation_apriltag WHERE aprilta
 
 ## plot counts
 counts = willy_route['apriltag'].value_counts().sort_index()
-pd.value_counts(willy_route['apriltag']).plot.bar()
-plt.show()
+walk=pd.value_counts(willy_route['apriltag']).plot.bar()
+walk.set_ylabel('aantal')
+walk.set_xlabel('apriltag')
+plt.show(walk)
 
 
 
