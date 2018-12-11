@@ -3,46 +3,36 @@ body
 {
     font-family: Arial;
     font-size: 16px;
-    background-color: #e5ecf2 ;
-    color: red;
+    background-color: #ecf2e5 ;
+    color: black;
     link: black;
 }
-
 p.groot
 {
     font-size: 30px;
 }
-
-
 p.klein
 {
     font-size: 20px;
-
 }
-
 div
 {
-    background-color: brown ;
+    background-color: #f2e5ec ;
 }
-
 ul
 {
     font-size: 20px;
     color: black;
 }
-
-
 table
 {
-    border: 3px solid green;
+    border: 3px solid #f2e5ec;
     background-color: #e5ecf2 ;
 }
-
 a
 {
     color: black;
 }
-
 td
 {
     border: 1px solid green;
