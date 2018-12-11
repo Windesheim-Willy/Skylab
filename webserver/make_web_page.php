@@ -116,7 +116,7 @@
     // close database
     $pdo = NULL;
     ?>
-
+    <br>
     <a href="topics.html">Terug naar topics pagina</a>
     </body>
 </html>
