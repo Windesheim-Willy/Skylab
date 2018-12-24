@@ -15,9 +15,8 @@ import matplotlib.pyplot as plt
 import warnings
 warnings.filterwarnings("ignore")
 
-# Add more stopwords to the list:
-stopwords = set(STOPWORDS)
-stopwords.update(["Update", "details", "App", "Used", "use", "splitsen", "might", "naar", "verschillende"])
+#Open file with all the blocked words:
+stopwords = set(line.strip() for line in open('stopwords.txt'))
 
 #open file with all the URLs to scrape
 with open('weblist.txt', encoding='utf-8-sig') as f:
@@ -59,16 +58,41 @@ clean_wiki = re.sub(' +',' ',clean_wiki)
 #Import Black and White shape of Willy
 willy_shape = np.array(Image.open("bwavatar.png"))
 
+# Open file with Wordcloud variables from file
+with open('cloudset.txt', encoding='utf-8-sig') as f:
+    cloudset = [line.strip() for line in f]
+
+# Convert line of list to string and search for 'starting' var to set to var
+bgcolor = ''.join([s for s in cloudset if "bgcolor" in s])
+if bgcolor.startswith('bgcolor'):
+    bgcolor = bgcolor[8:]
+
+max_words = ''.join([s for s in cloudset if "max_words" in s])
+if max_words.startswith('max_words'):
+    max_words = int(max_words[10:])
+
+min_font_size = ''.join([s for s in cloudset if "min_font_size" in s])
+if min_font_size.startswith('min_font_size'):
+    min_font_size = int(min_font_size[14:])
+
+contour_width = ''.join([s for s in cloudset if "contour_width" in s])
+if contour_width.startswith('contour_width'):
+    contour_width = int(contour_width[14:])
+
+contour_color = ''.join([s for s in cloudset if "contour_color" in s])
+if contour_color.startswith('contour_color'):
+    contour_color = contour_color[14:]
+
 # Create a word cloud image
-wc = WordCloud(background_color="white", max_words=1500, mask=willy_shape,
-               stopwords=stopwords,min_font_size=4, contour_width=5, contour_color='gainsboro')
+wc = WordCloud(background_color=bgcolor, max_words=max_words, mask=willy_shape,
+               stopwords=stopwords, min_font_size=min_font_size, contour_width=contour_width,
+               contour_color=contour_color)
 
 # Generate a wordcloud
 wc.generate(clean_wiki)
 
 # store to file
 wc.to_file("/var/www/html/willywordcloud.png")
-
 
 # show
 plt.figure(figsize=[20,10])

@@ -1,0 +1,6 @@
+bgcolor:red 
+max_words:1500
+min_font_size:4
+contour_width:5
+contour_color:gainsboro
+
