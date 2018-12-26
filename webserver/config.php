@@ -3,5 +3,6 @@
 define('LINES_PER_PAGE', 20);
 // SI node IP address for survey exchange
 define('SI_SURVEY_NODE_IP_ADDRESS', "192.168.0.11");
+define('P_NODE_IP_ADDRESS', "10.10.1.44");
 ?>
 

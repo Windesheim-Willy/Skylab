@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php
 // Begin define variables about the table ----------------------------------------------------
-$json_file = "/home/willy/survey/survey.json";
+$json_file = "/home/willy/survey/survey.txt";
 $jason_table_name = "survey_jason";
 $table_name = "survey";
 // End define variables about the table ----------------------------------------------------
@@ -23,15 +23,13 @@ try {
     // report error message
     echo $e->getMessage();
 }
-// read json file in to an array
-$lines = file($json_file);
-$t_name = substr($lines[1], 11);
-$t_description= substr($lines[2], 18);
-$t_author = substr($lines[3], 13);
 
-$name = substr($t_name, 0, strlen($t_name) - 4);
-$description = substr($t_description, 0 ,strlen($t_description) - 4);
-$author = substr($t_author, 0, strlen($t_author) - 3);
+// Read survey.txt
+$myfile = fopen($json_file, "r");
+$name = fgets($myfile);
+$description = fgets($myfile);
+$author = fgets($myfile);
+fclose($myfile);
 
 $to_do = "INSERT INTO " . $jason_table_name . " (name,description,author) VALUES ('" . $name . "','" . $description . "','" . $author . "')";
 // print($to_do) . "<br>";

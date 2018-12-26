@@ -32,12 +32,31 @@ print("<br>");
 // copy file
 // real locations when connection is made, un-remark next line for production
 // $remote_questions_file = "/opt/willy/components/social_interaction/src/interactions/assets/survey.csv";
+$local_questions_file_txt = "/home/willy/survey/survey.txt";
 $local_questions_file1 = "/home/willy/survey/survey.json";
 $local_questions_file2 = "/home/willy/survey/survey.csv";
 
 // test locations, ** remove next line for production **
 $remote_questions_file1 = "/opt/willy/components/social_interaction/src/interactions/assets/survey.json";
 $remote_questions_file2 = "/opt/willy/components/social_interaction/src/interactions/assets/survey.csv";
+
+// Convert survey.txt to survey.json
+$myfile = fopen($local_questions_file_txt, "r");
+$json_line1 = "  \"name\": \"" . fgets($myfile) . "\n";
+$json_line2 = "  \"description\": \"" . fgets($myfile) . "\n";
+$json_line3 = "  \"author\": \"" . fgets($myfile) . "\n";
+fclose($myfile);
+
+$json_line_start = "{\n";
+$json_line_end = "}";
+
+$myfile = fopen($local_questions_file1, "w");
+fwrite($myfile, $json_line_start);
+fwrite($myfile, $json_line1);
+fwrite($myfile, $json_line2);
+fwrite($myfile, $json_line3);
+fwrite($myfile, $json_line_end);
+fclose($myfile);
 
 print("<br>");
 

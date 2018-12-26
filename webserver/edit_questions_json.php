@@ -1,7 +1,7 @@
 <?php
 // configuration
 $url = 'edit_questions_json.php';
-$file = '/home/willy/survey/survey.json';
+$file = '/home/willy/survey/survey.txt';
 
 // check if form has been submitted
 if (isset($_POST['text'])) {
